@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy | Digixta Digital Agency</title>
+  <meta name="description" content="Privacy Policy for Digixta Digital Agency.">
+  <link rel="canonical" href="https://digixta.digital/privacy-policy">
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <link rel="stylesheet" href="privacy-policy.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav x-data="{ open: false }" @scroll.window="window.scrollY > 50 ? $el.classList.add('nav-scrolled') : $el.classList.remove('nav-scrolled')">
+    <div class="nav-inner">
+      <a href="index.html" class="logo">digixta</a>
+      <ul class="nav-links">
+        <li><a href="index.html#hero">Home</a></li>
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#services">Services</a></li>
+        <li><a href="index.html#works">Works</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+      <a href="index.html#contact" class="nav-cta">Get a Free Quote</a>
+      <button class="hamburger" @click="open = !open" :aria-expanded="open">
+        <span :style="open ? 'transform:rotate(45deg) translate(4px,4px)' : ''"></span>
+        <span :style="open ? 'opacity:0' : ''"></span>
+        <span :style="open ? 'transform:rotate(-45deg) translate(4px,-4px)' : ''"></span>
+      </button>
+    </div>
+    <div class="mobile-menu" x-show="open" x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0 -translate-y-2" x-transition:enter-end="opacity-100 translate-y-0" x-transition:leave="transition ease-in duration-200" x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 -translate-y-2" x-cloak>
+      <a href="index.html#hero" @click="open=false">Home</a>
+      <a href="index.html#about" @click="open=false">About</a>
+      <a href="index.html#services" @click="open=false">Services</a>
+      <a href="index.html#works" @click="open=false">Works</a>
+      <a href="index.html#contact" @click="open=false">Contact</a>
+      <a href="index.html#contact" class="mob-cta" @click="open=false">Get a Free Quote</a>
+    </div>
+  </nav>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="grid-lines"></div>
+    <div class="container hero-content">
+      <span class="section-label">Legal</span>
+      <h1>Privacy Policy</h1>
+      <p>Simple and transparent — here's what we collect, how we use it, and how we keep it safe.</p>
+      <div class="last-updated">Last updated: January 2026</div>
+    </div>
+  </section>
+
+  <!-- POLICY CONTENT -->
+  <section class="policy-section">
+    <div class="container">
+      <div class="policy-wrap">
+
+        <div class="policy-block">
+          <div class="block-num">01</div>
+          <h2>Who We Are</h2>
+          <p><strong>Digixta</strong> is a digital agency based in Karachi, Pakistan. This policy covers our website at digixta.digital and any communication you have with us.</p>
+        </div>
+
+        <div class="policy-block">
+          <div class="block-num">02</div>
+          <h2>What We Collect</h2>
+          <p>Only what you give us directly — nothing more.</p>
+          <ul class="policy-list">
+            <li>Your name, email, and WhatsApp number from the contact form</li>
+            <li>Project details you share with us</li>
+            <li>Basic, anonymous site visit data</li>
+          </ul>
+          <p>We do <strong>not</strong> collect payment details. Payments go through JazzCash, EasyPaisa, or bank transfer directly.</p>
+        </div>
+
+        <div class="policy-block">
+          <div class="block-num">03</div>
+          <h2>How We Use It</h2>
+          <ul class="policy-list">
+            <li>To respond to your enquiry or quote request</li>
+            <li>To deliver your project and send updates</li>
+            <li>To improve how our website works</li>
+          </ul>
+          <p>We will never send unsolicited emails or add you to a newsletter without your permission.</p>
+        </div>
+
+        <div class="policy-block">
+          <div class="block-num">04</div>
+          <h2>Data Sharing</h2>
+          <p>We don't sell, rent, or trade your information. The only exceptions are coordinating with a hosting provider on your behalf, or if required by Pakistani law — and only the minimum necessary is shared.</p>
+        </div>
+
+        <div class="policy-block">
+          <div class="block-num">05</div>
+          <h2>Cookies</h2>
+          <p>We use essential cookies (for the site to work) and basic anonymous analytics. No advertising cookies, no cross-site tracking. You can disable cookies in your browser anytime.</p>
+        </div>
+
+        <div class="policy-block">
+          <div class="block-num">06</div>
+          <h2>Your Rights</h2>
+          <p>You can ask us what data we hold, correct it, or have it deleted — anytime, no hassle. Just send us a message and we'll sort it within a few business days.</p>
+        </div>
+
+        <div class="policy-block">
+          <div class="block-num">07</div>
+          <h2>Third-Party Links</h2>
+          <p>Links to external sites (portfolio projects, social media) are outside our control. We recommend checking their own privacy policies.</p>
+        </div>
+
+        <div class="policy-block">
+          <div class="block-num">08</div>
+          <h2>Contact Us</h2>
+          <p>Questions about this policy? Reach out directly.</p>
+          <div class="contact-box">
+            <p><strong>Digixta Digital Agency</strong> — Karachi, Pakistan</p>
+            <p>Email: <a href="mailto:hello@digixta.digital">hello@digixta.digital</a></p>
+            <p>WhatsApp: <a href="https://wa.me/923222634502">+92 322 2634502</a></p>
+          </div>
+        </div>
+
+        <div class="policy-cta">
+          <div>
+            <h3>Ready to work together?</h3>
+            <p>Get a free quote — no commitment, no pressure.</p>
+          </div>
+          <a href="index.html#contact" class="btn-primary">Start a Project →</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-nav-left">
+          <a href="index.html">Digixta The Digital Agency .</a>
+        </div>
+        <div class="footer-nav-right">
+          <a href="index.html#hero">Home</a>
+          <a href="index.html#about">About</a>
+          <a href="index.html#services">Services</a>
+          <a href="index.html#works">Portfolio</a>
+          <a href="index.html#contact">Contact</a>
+        </div>
+      </div>
+      <div class="footer-brand">
+        <h1 class="logo-text">Digixta</h1>
+      </div>
+      <div class="footer-bottom">
+        <div class="footer-bottom-left">
+          <p>&copy; 2026 Digixta Digital Agency — Karachi, Pakistan</p>
+        </div>
+        <div class="footer-bottom-right">
+          <a href="/digixta/privacy-policy.html">Privacy Policy</a>
+          <a href="#">Terms & Conditions</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Terms & Conditions | Digixta Digital Agency</title>
+  <meta name="description" content="Terms and Conditions for Digixta Digital Agency. Understand how we work, what we deliver, and what we expect from each other.">
+  <link rel="canonical" href="https://digixta.digital/terms-and-conditions">
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <link rel="stylesheet" href="term-condition.css">
+
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav x-data="{ open: false }" @scroll.window="window.scrollY > 50 ? $el.classList.add('nav-scrolled') : $el.classList.remove('nav-scrolled')">
+    <div class="nav-inner">
+      <a href="index.html" class="logo">digixta</a>
+      <ul class="nav-links">
+        <li><a href="index.html#hero">Home</a></li>
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#services">Services</a></li>
+        <li><a href="index.html#works">Works</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+      <a href="index.html#contact" class="nav-cta">Get a Free Quote</a>
+      <button class="hamburger" @click="open = !open" :aria-expanded="open">
+        <span :style="open ? 'transform:rotate(45deg) translate(4px,4px)' : ''"></span>
+        <span :style="open ? 'opacity:0' : ''"></span>
+        <span :style="open ? 'transform:rotate(-45deg) translate(4px,-4px)' : ''"></span>
+      </button>
+    </div>
+    <div class="mobile-menu" x-show="open" x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0 -translate-y-2" x-transition:enter-end="opacity-100 translate-y-0" x-transition:leave="transition ease-in duration-200" x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 -translate-y-2" x-cloak>
+      <a href="index.html#hero" @click="open=false">Home</a>
+      <a href="index.html#about" @click="open=false">About</a>
+      <a href="index.html#services" @click="open=false">Services</a>
+      <a href="index.html#works" @click="open=false">Works</a>
+      <a href="index.html#contact" @click="open=false">Contact</a>
+      <a href="index.html#contact" class="mob-cta" @click="open=false">Get a Free Quote</a>
+    </div>
+  </nav>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="grid-lines"></div>
+    <div class="container hero-content">
+      <span class="section-label">Legal</span>
+      <h1>Terms & Conditions</h1>
+      <p>These are the terms we work by — clear, fair, and straightforward for both sides.</p>
+      <div class="last-updated">Last updated: January 2026</div>
+    </div>
+  </section>
+
+  <!-- TERMS CONTENT -->
+  <section class="policy-section">
+    <div class="container">
+      <div class="policy-wrap">
+
+        <div class="policy-block">
+          <div class="block-num">01</div>
+          <h2>Agreement & Proposal</h2>
+          <p>Every project at Digixta starts with a written proposal. The proposal outlines exactly what will be delivered, the timeline, and the cost. By approving the proposal and making the advance payment, the client agrees to these Terms & Conditions.</p>
+          <p>No work begins until a proposal is approved and the advance payment is received.</p>
+        </div>
+
+        <div class="policy-block">
+          <div class="block-num">02</div>
+          <h2>Scope of Work</h2>
+          <p>We deliver exactly what's written in the proposal — nothing more, nothing less. If requirements change or expand during the project, a revised proposal will be shared before any additional work begins.</p>
+          <p><strong>Adding new features or pages mid-project is treated as a new scope</strong>, not a revision. We'll always be upfront about any cost or timeline impact before proceeding.</p>
+        </div>
+
+        <div class="policy-block">
+          <div class="block-num">03</div>
+          <h2>Payment Terms</h2>
+          <ul class="policy-list">
+            <li><strong>50% advance</strong> required before work begins</li>
+            <li><strong>50% on delivery</strong> before the final files or live launch</li>
+            <li>Payments accepted via JazzCash, EasyPaisa, or bank transfer</li>
+            <li>The advance payment is <strong>non-refundable</strong> once work has started</li>
+            <li>If the client delays the final payment, the project delivery will be paused until payment is received</li>
+          </ul>
+          <p>If Digixta cancels the project for any reason on our end, a full refund will be issued.</p>
+        </div>
+
+        <div class="policy-block">
+          <div class="block-num">04</div>
+          <h2>Revisions</h2>
+          <p>Every project includes <strong>2 free revisions</strong>. A revision means refining or adjusting what's already been delivered — not adding new sections or changing the direction entirely.</p>
+          <ul class="policy-list">
+            <li>Revisions must be requested within the project review period</li>
+            <li>Additional revisions beyond the 2 included will be charged separately</li>
+            <li>Scope changes are not revisions — they follow the process in Section 02</li>
+          </ul>
+        </div>
+
+        <div class="policy-block">
+          <div class="block-num">05</div>
+          <h2>Client Responsibilities</h2>
+          <p>A smooth project depends on both sides showing up. We ask clients to:</p>
+          <ul class="policy-list">
+            <li>Provide all required content, images, logos, and information on time</li>
+            <li>Give clear and timely feedback during review stages</li>
+            <li>Give final approval before the project goes live</li>
+          </ul>
+          <p>If delays happen on the client's side — late content, slow feedback — the delivery timeline will be extended accordingly. We're not responsible for missed deadlines caused by client delays.</p>
+        </div>
+
+        <div class="policy-block">
+          <div class="block-num">06</div>
+          <h2>Intellectual Property</h2>
+          <p>Once the final payment is cleared, full ownership of the delivered work transfers to the client — website, design files, written content, everything.</p>
+          <p><strong>Until full payment is received</strong>, all work remains the property of Digixta and will not be handed over or made live.</p>
+        </div>
+
+        <div class="policy-block">
+          <div class="block-num">07</div>
+          <h2>Portfolio & Testimonials</h2>
+          <p>We're proud of the work we do, and we'd love to share it — but only with your permission.</p>
+          <ul class="policy-list">
+            <li>We will only add your project to our portfolio after getting your written or verbal approval</li>
+            <li>We will only publish or share a testimonial from you after you've confirmed it</li>
+            <li>You can decline either request at any point — no pressure, no conditions</li>
+          </ul>
+        </div>
+
+        <div class="policy-block">
+          <div class="block-num">08</div>
+          <h2>Post-Launch Support</h2>
+          <p>After your project goes live, we provide <strong>1 week of free support</strong>. This covers small bugs, broken links, minor display issues — anything that comes up right after launch.</p>
+          <p>After that 1-week window, any updates, changes, or maintenance will be handled under a paid plan. We'll share the options with you before the support period ends.</p>
+        </div>
+
+        <div class="policy-block">
+          <div class="block-num">09</div>
+          <h2>Third-Party Tools & Services</h2>
+          <p>Some projects involve third-party tools — hosting providers, domain registrars, payment gateways like JazzCash or EasyPaisa, or social media platforms.</p>
+          <p>Digixta is not responsible for downtime, policy changes, or issues caused by these third-party services. We'll always help troubleshoot where we can, but their platforms are outside our control.</p>
+        </div>
+
+        <div class="policy-block">
+          <div class="block-num">10</div>
+          <h2>SEO Disclaimer</h2>
+          <p>We build websites and create content that follow SEO best practices — proper structure, fast loading, keyword optimization, and more. However, <strong>we do not guarantee specific rankings on Google</strong> or any other search engine.</p>
+          <p>Search rankings depend on many factors outside our control, including Google's algorithm, competition in your market, and how long the website has been live. SEO takes time, and we'll always be honest about what to expect.</p>
+        </div>
+
+        <div class="policy-block">
+          <div class="block-num">11</div>
+          <h2>Confidentiality</h2>
+          <p>Both Digixta and the client agree to keep each other's business information confidential. We will not share your project details, business strategy, or sensitive information with anyone outside our team without your permission.</p>
+        </div>
+
+        <div class="policy-block">
+          <div class="block-num">12</div>
+          <h2>Questions or Concerns</h2>
+          <p>If anything here is unclear or you have a question before starting a project, just reach out. We'd rather talk it through than have any confusion later.</p>
+          <div class="contact-box">
+            <p><strong>Digixta Digital Agency</strong> — Karachi, Pakistan</p>
+            <p>Email: <a href="mailto:hello@digixta.digital">hello@digixta.digital</a></p>
+            <p>WhatsApp: <a href="https://wa.me/923222634502">+92 322 2634502</a></p>
+          </div>
+        </div>
+
+        <div class="policy-cta">
+          <div>
+            <h3>Ready to start a project?</h3>
+            <p>Get a free quote — no commitment, no pressure.</p>
+          </div>
+          <a href="index.html#contact" class="btn-primary">Get a Free Quote →</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-nav-left">
+          <a href="index.html">Digixta The Digital Agency .</a>
+        </div>
+        <div class="footer-nav-right">
+          <a href="index.html#hero">Home</a>
+          <a href="index.html#about">About</a>
+          <a href="index.html#services">Services</a>
+          <a href="index.html#works">Portfolio</a>
+          <a href="index.html#contact">Contact</a>
+        </div>
+      </div>
+      <div class="footer-brand">
+        <h1 class="logo-text">Digixta</h1>
+      </div>
+      <div class="footer-bottom">
+        <div class="footer-bottom-left">
+          <p>&copy; 2026 Digixta Digital Agency — Karachi, Pakistan</p>
+        </div>
+        <div class="footer-bottom-right">
+          <a href="/digixta/privacy-policy.html">Privacy Policy</a>
+          <a href="/digixta/terms-condition.html">Terms & Conditions</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+  </html>
