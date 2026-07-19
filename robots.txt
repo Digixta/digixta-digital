@@ -22,4 +22,4 @@ User-agent: Twitterbot
 Allow: /
 
 
-Sitemap: https://crazix.digital/sitemap.xml
+Sitemap: https://digixta.digital/sitemap.xml
