@@ -121,7 +121,7 @@
         <a href="#contact" class="btn-outline">Get a Free Quote</a>
       </div>
 
-      <div class="stats-row">
+      <div class="stats-row glass-card">
         <div class="stat">
           <div class="stat-num">10+</div>
           <div class="stat-label">Projects Delivered</div>
@@ -203,7 +203,7 @@
       <div class="services-grid">
 
         <!-- Service 1 -->
-        <div class="service-card" x-data="{ expanded: false }" data-aos="fade-up" data-aos-delay="100">
+        <div class="service-card glass-card tilt" x-data="{ expanded: false }" data-aos="fade-up" data-aos-delay="100">
           <div class="service-icon">
             <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
               stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -216,7 +216,13 @@
           <p class="service-short">Your website is your 24/7 salesperson. We build custom, mobile responsive websites
             for local businesses . that don't just look good they load fast, work on every device, and turn
             visitors into paying customers.</p>
-          <div class="service-full" x-show="expanded" x-collapse>
+          <div class="service-full" x-show="expanded"
+            x-transition:enter="transition ease-out duration-400"
+            x-transition:enter-start="opacity-0 -translate-y-2"
+            x-transition:enter-end="opacity-100 translate-y-0"
+            x-transition:leave="transition ease-in duration-250"
+            x-transition:leave-start="opacity-100 translate-y-0"
+            x-transition:leave-end="opacity-0 -translate-y-2">
             <p>Whether you need a simple landing page or a complete multi-page business website, we build it from
               scratch. No page builders, no recycled templates. Just clean, hand-coded websites designed specifically
               for your brand and your audience.</p>
@@ -236,7 +242,7 @@
         </div>
 
         <!-- Service 2 -->
-        <div class="service-card" x-data="{ expanded: false }" data-aos="fade-up" data-aos-delay="150">
+        <div class="service-card glass-card tilt" x-data="{ expanded: false }" data-aos="fade-up" data-aos-delay="150">
           <div class="service-icon">
             <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
               stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -247,7 +253,13 @@
           <h3>Local SEO Services Get Found on Google</h3>
           <p class="service-short">What's the point of a great website if nobody finds it? Our local SEO services make
             sure your business shows up when people in search for what you offer.</p>
-          <div class="service-full" x-show="expanded" x-collapse>
+          <div class="service-full" x-show="expanded"
+            x-transition:enter="transition ease-out duration-400"
+            x-transition:enter-start="opacity-0 -translate-y-2"
+            x-transition:enter-end="opacity-100 translate-y-0"
+            x-transition:leave="transition ease-in duration-250"
+            x-transition:leave-start="opacity-100 translate-y-0"
+            x-transition:leave-end="opacity-0 -translate-y-2">
             <p>From Google My Business optimization to on-page search engine optimization and local keyword targeting we
               handle everything that puts your business in front of the right people at the right time. We've helped
               local businesses go from zero online visibility to showing up on the first page for their area.</p>
@@ -266,7 +278,7 @@
         </div>
 
         <!-- Service 3 -->
-        <div class="service-card" x-data="{ expanded: false }" data-aos="fade-up" data-aos-delay="200">
+        <div class="service-card glass-card tilt" x-data="{ expanded: false }" data-aos="fade-up" data-aos-delay="200">
           <div class="service-icon">
             <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
               stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -277,7 +289,13 @@
           <h3>SEO Content Writing & Content Strategy</h3>
           <p class="service-short">Content is how Google decides where your website ranks and how customers decide
             whether to trust you. Every word we write is researched, structured, and optimized to rank.</p>
-          <div class="service-full" x-show="expanded" x-collapse>
+          <div class="service-full" x-show="expanded"
+            x-transition:enter="transition ease-out duration-400"
+            x-transition:enter-start="opacity-0 -translate-y-2"
+            x-transition:enter-end="opacity-100 translate-y-0"
+            x-transition:leave="transition ease-in duration-250"
+            x-transition:leave-start="opacity-100 translate-y-0"
+            x-transition:leave-end="opacity-0 -translate-y-2">
             <p>Our SEO content writing service covers everything from web copy and service pages to blog posts and
               social media captions. And because we write for humans first, your content doesn't sound robotic it sounds
               like a business worth trusting. We specialize in tech, local business, and digital marketing content for
@@ -297,7 +315,7 @@
         </div>
 
         <!-- Service 4 -->
-        <div class="service-card" x-data="{ expanded: false }" data-aos="fade-up" data-aos-delay="250">
+        <div class="service-card glass-card tilt" x-data="{ expanded: false }" data-aos="fade-up" data-aos-delay="250">
           <div class="service-icon">
             <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
               stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -309,7 +327,13 @@
           <h3>UI/UX Design & Brand Identity for Local Businesses</h3>
           <p class="service-short">First impressions happen in 3 seconds online. Our UI/UX design service focuses on
             creating interfaces that feel clean, trustworthy, and easy to use.</p>
-          <div class="service-full" x-show="expanded" x-collapse>
+          <div class="service-full" x-show="expanded"
+            x-transition:enter="transition ease-out duration-400"
+            x-transition:enter-start="opacity-0 -translate-y-2"
+            x-transition:enter-end="opacity-100 translate-y-0"
+            x-transition:leave="transition ease-in duration-250"
+            x-transition:leave-start="opacity-100 translate-y-0"
+            x-transition:leave-end="opacity-0 -translate-y-2">
             <p>We also handle brand identity logos, color systems, and visual language that make your business look
               professional across every platform. Whether you're starting from scratch or refreshing an existing brand,
               we make sure your business looks as good as it actually is.</p>
@@ -328,7 +352,7 @@
         </div>
 
         <!-- Service 5 -->
-        <div class="service-card" x-data="{ expanded: false }" data-aos="fade-up" data-aos-delay="300">
+        <div class="service-card glass-card tilt" x-data="{ expanded: false }" data-aos="fade-up" data-aos-delay="300">
           <div class="service-icon">
             <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
               stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -339,7 +363,13 @@
           <p class="service-short">Social media isn't just about looking active it's one of the most powerful lead
             generation tools a local business has . We manage your Instagram and Facebook with a proper
             content strategy.</p>
-          <div class="service-full" x-show="expanded" x-collapse>
+          <div class="service-full" x-show="expanded"
+            x-transition:enter="transition ease-out duration-400"
+            x-transition:enter-start="opacity-0 -translate-y-2"
+            x-transition:enter-end="opacity-100 translate-y-0"
+            x-transition:leave="transition ease-in duration-250"
+            x-transition:leave-start="opacity-100 translate-y-0"
+            x-transition:leave-end="opacity-0 -translate-y-2">
             <p>Every post we create is designed with a purpose build trust, grow your audience, or generate inquiries.
               We don't recycle generic content. We create social media marketing that matches your brand and speaks
               directly to your local customers.</p>
@@ -358,7 +388,7 @@
         </div>
 
         <!-- Service 6 -->
-        <div class="service-card" x-data="{ expanded: false }" data-aos="fade-up" data-aos-delay="350">
+        <div class="service-card glass-card tilt" x-data="{ expanded: false }" data-aos="fade-up" data-aos-delay="350">
           <div class="service-icon">
             <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
               stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -371,7 +401,13 @@
           <p class="service-short">Ready to sell online or scale your digital marketing beyond social media? We build
             ecommerce websites for Pakistani businesses looking to take their products online with secure payment
             integration.</p>
-          <div class="service-full" x-show="expanded" x-collapse>
+          <div class="service-full" x-show="expanded"
+            x-transition:enter="transition ease-out duration-400"
+            x-transition:enter-start="opacity-0 -translate-y-2"
+            x-transition:enter-end="opacity-100 translate-y-0"
+            x-transition:leave="transition ease-in duration-250"
+            x-transition:leave-start="opacity-100 translate-y-0"
+            x-transition:leave-end="opacity-0 -translate-y-2">
             <p>We also offer full digital marketing services including Google Ads setup, Meta ad campaigns, and
               performance tracking. Whether you're a startup launching your first product or an established business
               ready for digital transformation Digixta builds the strategy and executes it end-to-end.</p>
@@ -418,8 +454,8 @@
 
       <div class="portfolio-grid">
 
-        <div class="portfolio-card" x-data="{ expanded: false }" data-aos="fade-up" data-aos-delay="100">
-          <div class="portfolio-type">Web Development</div>
+        <div class="portfolio-card glass-card tilt" x-data="{ expanded: false }" data-aos="fade-up" data-aos-delay="100">
+          <div class="portfolio-type " >Web Development</div>
           <h3>GrillUp</h3>
           <p>Restaurant website showcasing menu , Location , Contact Information</p>
           <div class="portfolio-tags">
@@ -430,7 +466,7 @@
           </button> -->
         </div>
 
-        <div class="portfolio-card" x-data="{ expanded: false }" data-aos="fade-up" data-aos-delay="200">
+        <div class="portfolio-card glass-card tilt" x-data="{ expanded: false }" data-aos="fade-up" data-aos-delay="200">
           <div class="portfolio-type">SEO Content</div>
           <h3>Tech Blog Optimization</h3>
           <p>Improved website ranking by creating SEO-optimized blog content and keyword strategy.</p>
@@ -438,7 +474,13 @@
             <span>SEO</span><span>Content Writing</span><span>Keyword Research</span>
           </div>
 
-          <div class="portfolio-detail" x-show="expanded" x-collapse>
+          <div class="portfolio-detail" x-show="expanded"
+            x-transition:enter="transition ease-out duration-400"
+            x-transition:enter-start="opacity-0 -translate-y-2"
+            x-transition:enter-end="opacity-100 translate-y-0"
+            x-transition:leave="transition ease-in duration-250"
+            x-transition:leave-start="opacity-100 translate-y-0"
+            x-transition:leave-end="opacity-0 -translate-y-2">
             <p>
               Worked on optimizing blog articles using keyword research, on-page SEO, and readability improvements.
               Increased organic traffic by 40% within 2 months by targeting low-competition keywords and improving
@@ -448,7 +490,7 @@
           </div>
         </div>
 
-        <div class="portfolio-card" x-data="{ expanded: false }" data-aos="fade-up" data-aos-delay="300">
+        <div class="portfolio-card glass-card tilt" x-data="{ expanded: false }" data-aos="fade-up" data-aos-delay="300">
           <div class="portfolio-type">Social Media</div>
           <h3>Instagram Growth Campaign</h3>
           <p>Managed and grew an Instagram page through content strategy and audience engagement.</p>
@@ -456,7 +498,13 @@
             <span>Instagram</span><span>Content Strategy</span><span>Marketing</span>
           </div>
 
-          <div class="portfolio-detail" x-show="expanded" x-collapse>
+          <div class="portfolio-detail" x-show="expanded"
+            x-transition:enter="transition ease-out duration-400"
+            x-transition:enter-start="opacity-0 -translate-y-2"
+            x-transition:enter-end="opacity-100 translate-y-0"
+            x-transition:leave="transition ease-in duration-250"
+            x-transition:leave-start="opacity-100 translate-y-0"
+            x-transition:leave-end="opacity-0 -translate-y-2">
             <p>
               Created engaging posts, reels, and captions with a consistent brand theme.
               Increased followers from 0 to 2,000+ and improved engagement rate using trending content and hashtags.
@@ -480,10 +528,16 @@
 
       <div class="why-grid">
 
-        <div class="why-card" x-data="{ open: false }" data-aos="fade-up" data-aos-delay="100">
+        <div class="why-card glass-card tilt" x-data="{ open: false }" data-aos="fade-up" data-aos-delay="100">
           <div class="why-num">01</div>
           <h3>Direct Access to the People Doing Your Work</h3>
-          <div class="why-body" x-show="open" x-collapse>
+          <div class="why-body" x-show="open"
+            x-transition:enter="transition ease-out duration-400"
+            x-transition:enter-start="opacity-0 -translate-y-2"
+            x-transition:enter-end="opacity-100 translate-y-0"
+            x-transition:leave="transition ease-in duration-250"
+            x-transition:leave-start="opacity-100 translate-y-0"
+            x-transition:leave-end="opacity-0 -translate-y-2">
             <p>When you hire Digixta, you talk directly to the developers and strategists building your project not an
               account manager relaying messages. Faster decisions, clearer communication, better results.</p>
           </div>
@@ -492,10 +546,16 @@
           </button>
         </div>
 
-        <div class="why-card" x-data="{ open: false }" data-aos="fade-up" data-aos-delay="200">
+        <div class="why-card glass-card tilt" x-data="{ open: false }" data-aos="fade-up" data-aos-delay="200">
           <div class="why-num">02</div>
           <h3>Understanding Your Audience</h3>
-          <div class="why-body" x-show="open" x-collapse>
+          <div class="why-body" x-show="open"
+            x-transition:enter="transition ease-out duration-400"
+            x-transition:enter-start="opacity-0 -translate-y-2"
+            x-transition:enter-end="opacity-100 translate-y-0"
+            x-transition:leave="transition ease-in duration-250"
+            x-transition:leave-start="opacity-100 translate-y-0"
+            x-transition:leave-end="opacity-0 -translate-y-2">
             <p>
             <p>We don’t rely on guesswork. We understand how your customers search, think, and buy — and we build
               strategies that bring real traffic, real leads, and real growth to your business.</p>
@@ -506,10 +566,16 @@
           </button>
         </div>
 
-        <div class="why-card" x-data="{ open: false }" data-aos="fade-up" data-aos-delay="300">
+        <div class="why-card glass-card tilt" x-data="{ open: false }" data-aos="fade-up" data-aos-delay="300">
           <div class="why-num">03</div>
           <h3>Affordable Web Design Without Cutting Corners</h3>
-          <div class="why-body" x-show="open" x-collapse>
+          <div class="why-body" x-show="open"
+            x-transition:enter="transition ease-out duration-400"
+            x-transition:enter-start="opacity-0 -translate-y-2"
+            x-transition:enter-end="opacity-100 translate-y-0"
+            x-transition:leave="transition ease-in duration-250"
+            x-transition:leave-start="opacity-100 translate-y-0"
+            x-transition:leave-end="opacity-0 -translate-y-2">
             <p>We offer affordable web design packages for Pakistan's market without compromising on quality. Clean
               code, real design, proper SEO at a price that works for small and medium businesses.</p>
           </div>
@@ -518,10 +584,16 @@
           </button>
         </div>
 
-        <div class="why-card" x-data="{ open: false }" data-aos="fade-up" data-aos-delay="400">
+        <div class="why-card glass-card tilt" x-data="{ open: false }" data-aos="fade-up" data-aos-delay="400">
           <div class="why-num">04</div>
           <h3>Everything in One Place</h3>
-          <div class="why-body" x-show="open" x-collapse>
+          <div class="why-body" x-show="open"
+            x-transition:enter="transition ease-out duration-400"
+            x-transition:enter-start="opacity-0 -translate-y-2"
+            x-transition:enter-end="opacity-100 translate-y-0"
+            x-transition:leave="transition ease-in duration-250"
+            x-transition:leave-start="opacity-100 translate-y-0"
+            x-transition:leave-end="opacity-0 -translate-y-2">
             <p>Website development, SEO, content writing, UI/UX, social media all handled by Digixta. No coordinating
               between five different vendors. One agency, full digital coverage.</p>
           </div>
@@ -670,56 +742,86 @@
 
       <div class="faq-list">
 
-        <div class="faq-item" x-data="{ open: false }" data-aos="fade-up">
+        <div class="faq-item glass-card" x-data="{ open: false }" data-aos="fade-up">
           <button class="faq-question" @click="open = !open" :aria-expanded="open">
             <span>How long does it take to build a website?</span>
             <span class="faq-icon" :class="{ 'faq-open': open }">+</span>
           </button>
-          <div class="faq-answer" x-show="open" x-collapse>
+          <div class="faq-answer" x-show="open"
+            x-transition:enter="transition ease-out duration-400"
+            x-transition:enter-start="opacity-0 -translate-y-2"
+            x-transition:enter-end="opacity-100 translate-y-0"
+            x-transition:leave="transition ease-in duration-250"
+            x-transition:leave-start="opacity-100 translate-y-0"
+            x-transition:leave-end="opacity-0 -translate-y-2">
             <p>Most websites are delivered within 7–10 working days, depending on complexity. Simple landing pages can
               be done in 3-5 days, while larger projects may take 2-3 weeks.</p>
           </div>
         </div>
 
-        <div class="faq-item" x-data="{ open: false }" data-aos="fade-up" data-aos-delay="100">
+        <div class="faq-item glass-card" x-data="{ open: false }" data-aos="fade-up" data-aos-delay="100">
           <button class="faq-question" @click="open = !open" :aria-expanded="open">
             <span>Do you offer payment plans?</span>
             <span class="faq-icon" :class="{ 'faq-open': open }">+</span>
           </button>
-          <div class="faq-answer" x-show="open" x-collapse>
+          <div class="faq-answer" x-show="open"
+            x-transition:enter="transition ease-out duration-400"
+            x-transition:enter-start="opacity-0 -translate-y-2"
+            x-transition:enter-end="opacity-100 translate-y-0"
+            x-transition:leave="transition ease-in duration-250"
+            x-transition:leave-start="opacity-100 translate-y-0"
+            x-transition:leave-end="opacity-0 -translate-y-2">
             <p>Yes! We work with a 50% upfront, 50% on completion model. We accept JazzCash, EasyPaisa, and bank
               transfers. For larger projects, we can discuss custom payment plans.</p>
           </div>
         </div>
 
-        <div class="faq-item" x-data="{ open: false }" data-aos="fade-up" data-aos-delay="200">
+        <div class="faq-item glass-card" x-data="{ open: false }" data-aos="fade-up" data-aos-delay="200">
           <button class="faq-question" @click="open = !open" :aria-expanded="open">
             <span>Do I get revisions included?</span>
             <span class="faq-icon" :class="{ 'faq-open': open }">+</span>
           </button>
-          <div class="faq-answer" x-show="open" x-collapse>
+          <div class="faq-answer" x-show="open"
+            x-transition:enter="transition ease-out duration-400"
+            x-transition:enter-start="opacity-0 -translate-y-2"
+            x-transition:enter-end="opacity-100 translate-y-0"
+            x-transition:leave="transition ease-in duration-250"
+            x-transition:leave-start="opacity-100 translate-y-0"
+            x-transition:leave-end="opacity-0 -translate-y-2">
             <p>Every project includes two free revisions. We build, you review, and we refine based on your feedback.
               Additional revisions can be arranged at a small cost.</p>
           </div>
         </div>
 
-        <div class="faq-item" x-data="{ open: false }" data-aos="fade-up" data-aos-delay="300">
+        <div class="faq-item glass-card" x-data="{ open: false }" data-aos="fade-up" data-aos-delay="300">
           <button class="faq-question" @click="open = !open" :aria-expanded="open">
             <span>Do you work with businesses outside ?</span>
             <span class="faq-icon" :class="{ 'faq-open': open }">+</span>
           </button>
-          <div class="faq-answer" x-show="open" x-collapse>
+          <div class="faq-answer" x-show="open"
+            x-transition:enter="transition ease-out duration-400"
+            x-transition:enter-start="opacity-0 -translate-y-2"
+            x-transition:enter-end="opacity-100 translate-y-0"
+            x-transition:leave="transition ease-in duration-250"
+            x-transition:leave-start="opacity-100 translate-y-0"
+            x-transition:leave-end="opacity-0 -translate-y-2">
             <p>Absolutely! While we're based in Karachi, we work with clients across Pakistan and internationally.
               Everything is managed online, so location doesn't matter.</p>
           </div>
         </div>
 
-        <div class="faq-item" x-data="{ open: false }" data-aos="fade-up" data-aos-delay="400">
+        <div class="faq-item glass-card" x-data="{ open: false }" data-aos="fade-up" data-aos-delay="400">
           <button class="faq-question" @click="open = !open" :aria-expanded="open">
             <span>What happens after my project is complete?</span>
             <span class="faq-icon" :class="{ 'faq-open': open }">+</span>
           </button>
-          <div class="faq-answer" x-show="open" x-collapse>
+          <div class="faq-answer" x-show="open"
+            x-transition:enter="transition ease-out duration-400"
+            x-transition:enter-start="opacity-0 -translate-y-2"
+            x-transition:enter-end="opacity-100 translate-y-0"
+            x-transition:leave="transition ease-in duration-250"
+            x-transition:leave-start="opacity-100 translate-y-0"
+            x-transition:leave-end="opacity-0 -translate-y-2">
             <p>We provide 2 weeks of free post-launch support for any fixes or updates. After that, we offer affordable
               monthly maintenance packages to keep your website running smoothly.</p>
           </div>
@@ -742,7 +844,7 @@
 
       <div class="contact-grid">
 
-        <div class="contact-form-wrap" data-aos="fade-up">
+        <div class="contact-form-wrap " data-aos="fade-up">
           <form x-data="contactForm()" @submit.prevent="submitForm()" class="contact-form">
 
             <div class="form-row">
@@ -769,7 +871,7 @@
 
         <div class="contact-info" data-aos="fade-up" data-aos-delay="200">
 
-          <div class="contact-card">
+          <div class="contact-card glass-card tilt">
             <div class="contact-icon">
               <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
                 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -781,7 +883,7 @@
             <a href="https://wa.me/923222634502" class="contact-link">Chat Now &rarr;</a>
           </div>
 
-          <div class="contact-card">
+          <div class="contact-card glass-card tilt">
             <div class="contact-icon">
               <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
                 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -793,7 +895,7 @@
             <a href="mailto:hello@digixta.digital" class="contact-link">Send Email &rarr;</a>
           </div>
 
-          <!-- <div class="contact-card">
+          <!-- <div class="contact-card glass-card tilt">
             <div class="contact-icon">
               <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
                 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -807,7 +909,7 @@
             <a href="#" class="contact-link">Follow Us &rarr;</a>
           </div>
 
-          <div class="contact-card">
+          <div class="contact-card glass-card tilt">
             <div class="contact-icon">
               <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
                 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -869,6 +971,38 @@
 
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
   <script src="script.js"></script>
+
+  <!-- 3D GLASS TILT — native JS, no libraries.
+       Tracks the pointer over each .tilt card and exposes the
+       position as CSS custom properties (--rx, --ry, --mx, --my),
+       which style.css uses to rotate the card in 3D and move a
+       radial glare/reflection under the cursor. Skipped entirely
+       on touch devices, where hover has no meaning. -->
+  <script>
+    if (window.matchMedia('(pointer: fine)').matches) {
+      document.querySelectorAll('.tilt').forEach((el) => {
+        el.style.setProperty('--rx', '0deg');
+        el.style.setProperty('--ry', '0deg');
+
+        el.addEventListener('pointermove', (e) => {
+          const r = el.getBoundingClientRect();
+          const px = (e.clientX - r.left) / r.width;
+          const py = (e.clientY - r.top) / r.height;
+          const rx = (px - 0.5) * 12;
+          const ry = (py - 0.5) * -12;
+          el.style.setProperty('--rx', rx.toFixed(2) + 'deg');
+          el.style.setProperty('--ry', ry.toFixed(2) + 'deg');
+          el.style.setProperty('--mx', (px * 100).toFixed(1) + '%');
+          el.style.setProperty('--my', (py * 100).toFixed(1) + '%');
+        });
+
+        el.addEventListener('pointerleave', () => {
+          el.style.setProperty('--rx', '0deg');
+          el.style.setProperty('--ry', '0deg');
+        });
+      });
+    }
+  </script>
 </body>
 
 </html>
