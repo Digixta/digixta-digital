@@ -10,7 +10,6 @@ User-agent: ClaudeBot
 User-agent: Claude-Web
 User-agent: Diffbot
 User-agent: FacebookBot
-User-agent: Google-Extended
 User-agent: GPTBot
 User-agent: meta-externalagent
 User-agent: PerplexityBot
@@ -19,6 +18,7 @@ Disallow: /
 
 User-agent: facebookexternalhit
 User-agent: Twitterbot
+User-agent: Google-Extended
 Allow: /
 
 
