@@ -1,8 +1,26 @@
 
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+<!-- home page -->
 <url>
 <loc>https://digixta.digital/</loc>
 <lastmod>2026-06-01</lastmod>
 <changefreq>monthly</changefreq>
+<priority>1.0</priority>
 </url>
+
+<url>
+<loc>https://digixta.digital/privacy-policy</loc>
+<lastmod>2026-06-01</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
+</url>
+
+<url>
+<loc>https://digixta.digital/terms-conditions</loc>
+<lastmod>2026-06-01</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
+</url>
+
 </urlset>
