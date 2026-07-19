@@ -638,11 +638,14 @@ nav {
 }
 
 .portfolio-type {
-  font-size: 0.65rem;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: rgba(255,255,255,0.3);
-  margin-bottom: 0.75rem;
+ font-size: 0.7rem;
+ width: 150px;
+ margin-bottom: 10px;
+  padding: 3px 10px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.04);
+  color: rgba(255,255,255,0.35);
+  border: 1px solid rgba(255,255,255,0.06);
 }
 
 .portfolio-card h3 {
@@ -1490,4 +1493,433 @@ background: rgba(5,5,5,0.85);
   background: rgba(255,255,255,0.08);
   color: white;
   border-color: rgba(255,255,255,0.4);
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   3D GLASSMORPHISM · PREMIUM DASHBOARD REDESIGN
+   Pure CSS + native JS/Alpine — no external animation libraries.
+   Appended after the base stylesheet; wins the cascade naturally.
+   ═══════════════════════════════════════════════════════════════ */
+
+:root {
+  --glass-fill:      linear-gradient(135deg,
+                        rgba(255,255,255,0.14) 0%,
+                        rgba(255,255,255,0.045) 45%,
+                        rgba(255,255,255,0.09) 100%);
+  --glass-fill-hover: linear-gradient(135deg,
+                        rgba(255,255,255,0.20) 0%,
+                        rgba(255,255,255,0.06) 45%,
+                        rgba(255,255,255,0.13) 100%);
+  --glass-blur:       blur(22px) saturate(160%);
+  --glass-blur-soft:  blur(14px) saturate(140%);
+
+  /* Multi-layer "floating cut glass" shadow stack:
+     top-left highlight, bottom-right shade, ambient float,
+     contact shadow, and a crisp hairline edge. */
+  --glass-shadow:
+    inset 1px 1px 0 rgba(255,255,255,0.28),
+    inset -1px -1px 0 rgba(0,0,0,0.30),
+    0 24px 60px -16px rgba(0,0,0,0.60),
+    0 8px 20px -6px rgba(0,0,0,0.45),
+    0 0 0 1px rgba(255,255,255,0.09);
+
+  --glass-shadow-hover:
+    inset 1px 1px 0 rgba(255,255,255,0.38),
+    inset -1px -1px 0 rgba(0,0,0,0.35),
+    0 32px 80px -16px rgba(0,0,0,0.70),
+    0 12px 28px -6px rgba(0,0,0,0.5),
+    0 0 0 1px rgba(255,255,255,0.16),
+    0 0 40px -8px rgba(140,170,255,0.25);
+
+  --glass-radius: 20px;
+}
+
+/* ── Animated aurora background ────────────────────────────────
+   Several large, softly blurred color fields that drift slowly.
+   This is what the glass actually reflects/blurs — without it,
+   "frosted glass" over flat black is just a grey box. */
+body { position: relative; isolation: isolate; }
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: -10%;
+  z-index: -2;
+  pointer-events: none;
+  background:
+    radial-gradient(38% 32% at 12% 8%,  rgba(110,130,255,0.22), transparent 70%),
+    radial-gradient(34% 30% at 90% 14%, rgba(255,110,190,0.16), transparent 70%),
+    radial-gradient(40% 34% at 78% 92%, rgba(90,220,210,0.14),  transparent 70%),
+    radial-gradient(30% 26% at 8% 90%,  rgba(160,110,255,0.16), transparent 70%);
+  filter: blur(70px);
+  animation: auroraDrift 26s ease-in-out infinite alternate;
+}
+
+/* Faint fixed grid, dashboard-style, sits above the aurora but
+   below all content — reinforces the "high-tech" feel site-wide. */
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px);
+  background-size: 56px 56px;
+  mask-image: radial-gradient(ellipse 90% 70% at 50% 20%, #000 40%, transparent 90%);
+}
+
+@keyframes auroraDrift {
+  0%   { transform: translate3d(0, 0, 0) scale(1); }
+  50%  { transform: translate3d(-2%, 2%, 0) scale(1.06); }
+  100% { transform: translate3d(2%, -1%, 0) scale(1.02); }
+}
+
+@media (max-width: 768px) {
+  body::before { filter: blur(50px); opacity: 0.7; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body::before { animation: none; }
+}
+
+/* ── Navbar: glossy glass bar ───────────────────────────────── */
+nav {
+  background: linear-gradient(135deg, rgba(14,14,18,0.65), rgba(14,14,18,0.45)) !important;
+  backdrop-filter: blur(20px) saturate(160%);
+  -webkit-backdrop-filter: blur(20px) saturate(160%);
+  border-bottom: 1px solid rgba(255,255,255,0.10);
+  box-shadow: 0 1px 0 rgba(255,255,255,0.06) inset, 0 12px 30px -14px rgba(0,0,0,0.6);
+  transition: background 0.4s ease, box-shadow 0.4s ease;
+}
+
+.nav-scrolled {
+  background: linear-gradient(135deg, rgba(10,10,13,0.82), rgba(10,10,13,0.68)) !important;
+  box-shadow: 0 1px 0 rgba(255,255,255,0.08) inset, 0 16px 40px -14px rgba(0,0,0,0.7);
+}
+
+.nav-links a {
+  position: relative;
+}
+
+.nav-cta {
+  background: linear-gradient(135deg, #ffffff, #d8d8e2);
+  box-shadow: 0 6px 18px -4px rgba(255,255,255,0.25), inset 0 1px 0 rgba(255,255,255,0.7);
+  transition: transform 0.25s cubic-bezier(.2,.8,.2,1), box-shadow 0.25s ease, background 0.25s ease;
+}
+
+.nav-cta:hover {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 10px 26px -6px rgba(255,255,255,0.32), inset 0 1px 0 rgba(255,255,255,0.8);
+}
+
+.mobile-menu {
+  background: linear-gradient(160deg, rgba(14,14,18,0.85), rgba(14,14,18,0.65)) !important;
+  backdrop-filter: blur(24px) saturate(160%);
+  -webkit-backdrop-filter: blur(24px) saturate(160%);
+  border-top: 1px solid rgba(255,255,255,0.10);
+  box-shadow: 0 20px 50px -14px rgba(0,0,0,0.65);
+}
+
+/* ── Alpine transition utility classes ─────────────────────────
+   The markup already calls x-transition:enter="transition
+   ease-out duration-700" etc. — these classnames were previously
+   undefined (no Tailwind is loaded), so those transitions were
+   silent no-ops. Defining them for real is what makes the hero,
+   mobile menu, and every card-collapse animate with a soft
+   3D + blur "drop-in" motion. */
+.transition   { transition-property: opacity, transform, filter; }
+.ease-out     { transition-timing-function: cubic-bezier(.16, 1, .3, 1); }
+.ease-in      { transition-timing-function: cubic-bezier(.7, 0, .84, 0); }
+.duration-200 { transition-duration: .2s; }
+.duration-250 { transition-duration: .25s; }
+.duration-300 { transition-duration: .3s; }
+.duration-400 { transition-duration: .4s; }
+.duration-700 { transition-duration: .7s; }
+
+.opacity-0    { opacity: 0; filter: blur(10px); }
+.opacity-100  { opacity: 1; filter: blur(0); }
+
+.translate-y-0   { transform: perspective(900px) translateY(0)    rotateX(0)     scale(1); }
+.translate-y-6    { transform: perspective(900px) translateY(30px) rotateX(-5deg) scale(0.98); }
+.-translate-y-2  { transform: perspective(900px) translateY(-12px) rotateX(4deg)  scale(0.99); }
+
+/* ── Scroll-reveal (AOS) upgraded to a 3D glass drop-in ────────
+   Overrides AOS's default translate/opacity handling for a more
+   premium "panel focuses into place" motion. Loaded after
+   aos.css in the document, so this wins on equal specificity. */
+[data-aos] {
+  transition-property: opacity, transform, filter !important;
+}
+
+[data-aos="fade-up"] {
+  opacity: 0;
+  transform: perspective(1000px) translateY(48px) rotateX(-7deg) scale(0.96);
+  filter: blur(7px);
+  transition-timing-function: cubic-bezier(.16, 1, .3, 1) !important;
+  transition-duration: 0.9s !important;
+}
+
+[data-aos="fade-up"].aos-animate {
+  opacity: 1;
+  transform: perspective(1000px) translateY(0) rotateX(0) scale(1);
+  filter: blur(0);
+}
+
+/* ── Pills / badges ─────────────────────────────────────────── */
+.hero-badge,
+.section-label,
+.pricing-badge,
+.portfolio-type,
+.portfolio-tags span {
+  background: var(--glass-fill);
+  backdrop-filter: var(--glass-blur-soft);
+  -webkit-backdrop-filter: var(--glass-blur-soft);
+  border-color: rgba(255,255,255,0.14);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.2), 0 4px 14px -6px rgba(0,0,0,0.5);
+}
+
+/* ── Core glass surface: mirror-glass panels ───────────────────
+   Shared by every card-like block. Layered gradient fill (not a
+   flat tint) + multi-shadow stack for real depth, a glossy top
+   highlight, and a sheen sweep + cursor-glare on hover. */
+.glass-card {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  background: var(--glass-fill) !important;
+  border: 1px solid rgba(255,255,255,0.14) !important;
+  border-radius: var(--glass-radius);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  box-shadow: var(--glass-shadow);
+}
+
+/* Cursor-tracking radial glare (position set by JS via --mx/--my) */
+.glass-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  border-radius: inherit;
+  background: radial-gradient(circle at var(--mx, 50%) var(--my, 20%),
+                rgba(255,255,255,0.28), transparent 55%);
+  opacity: 0;
+  transition: opacity 0.45s ease;
+  pointer-events: none;
+}
+
+/* Diagonal sheen that sweeps across on hover */
+.glass-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  border-radius: inherit;
+  background: linear-gradient(115deg, transparent 42%, rgba(255,255,255,0.20) 50%, transparent 58%);
+  transform: translateX(-130%);
+  transition: transform 0.9s cubic-bezier(.19, 1, .22, 1);
+  pointer-events: none;
+}
+
+.glass-card:hover::before { opacity: 1; }
+.glass-card:hover::after  { transform: translateX(130%); }
+
+.glass-card > * { position: relative; z-index: 2; }
+
+.glass-card:hover {
+  background: var(--glass-fill-hover) !important;
+  border-color: rgba(255,255,255,0.26) !important;
+  box-shadow: var(--glass-shadow-hover);
+}
+
+/* ── 3D tilt (rotation driven by JS pointer tracking) ─────────
+   --rx / --ry are set by the inline script on pointermove and
+   reset to 0 on pointerleave. The transform transition is what
+   makes it feel buttery rather than snapping. */
+.tilt {
+  transform: perspective(1000px)
+             rotateX(var(--ry, 0deg))
+             rotateY(var(--rx, 0deg))
+             translateY(0)
+             scale(1);
+  transition: transform 0.25s cubic-bezier(.2, .8, .2, 1),
+              background 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
+  will-change: transform;
+}
+
+.tilt:hover {
+  transform: perspective(1000px)
+             rotateX(var(--ry, 0deg))
+             rotateY(var(--rx, 0deg))
+             translateY(-10px)
+             scale(1.02);
+}
+
+/* Non-tilt glass containers still get a gentle lift */
+.stats-row.glass-card:hover,
+.contact-form-wrap.glass-card:hover,
+.faq-item.glass-card:hover {
+  transform: translateY(-3px);
+}
+
+/* ── FAQ: glass card list ───────────────────────────────────── */
+.faq-item.glass-card {
+  border-radius: 16px;
+  padding: 0 1.25rem;
+  margin-bottom: 12px;
+  transition: transform 0.35s cubic-bezier(.2,.8,.2,1), background 0.4s ease,
+              border-color 0.4s ease, box-shadow 0.4s ease;
+}
+.faq-item.glass-card:last-child { margin-bottom: 0; }
+
+/* ── Pricing "featured" card gets an accent glow ring ─────────*/
+.pricing-card.featured.glass-card {
+  background: var(--glass-fill-hover) !important;
+  border-color: rgba(180, 195, 255, 0.35) !important;
+  box-shadow: var(--glass-shadow-hover), 0 0 0 1px rgba(140,170,255,0.18);
+}
+
+/* ── Buttons & toggles ──────────────────────────────────────── */
+.btn-outline,
+.service-toggle,
+.portfolio-toggle,
+.why-toggle,
+.skip-button {
+  background: var(--glass-fill);
+  backdrop-filter: var(--glass-blur-soft);
+  -webkit-backdrop-filter: var(--glass-blur-soft);
+  border-color: rgba(255,255,255,0.14);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.14), 0 6px 16px -8px rgba(0,0,0,0.5);
+  transition: transform 0.25s cubic-bezier(.2,.8,.2,1), background 0.3s ease,
+              border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-outline:hover,
+.service-toggle:hover,
+.portfolio-toggle:hover,
+.why-toggle:hover {
+  background: var(--glass-fill-hover);
+  border-color: rgba(255,255,255,0.3);
+  transform: translateY(-2px);
+}
+
+.btn-primary,
+.pricing-btn,
+.contact-form button,
+.mobile-menu .mob-cta {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, #ffffff, #dcdce6) !important;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.8), 0 10px 26px -8px rgba(255,255,255,0.28);
+  transition: transform 0.25s cubic-bezier(.2,.8,.2,1), box-shadow 0.25s ease;
+}
+
+.btn-primary:hover,
+.pricing-btn:hover,
+.contact-form button:hover {
+  transform: translateY(-3px) scale(1.015);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.9), 0 16px 36px -8px rgba(255,255,255,0.35);
+}
+
+.btn-primary:active,
+.btn-outline:active,
+.pricing-btn:active,
+.contact-form button:active {
+  transform: translateY(0) scale(0.98);
+}
+
+/* ── Form fields: frosted glass inputs ─────────────────────────*/
+.contact-form input,
+.contact-form textarea {
+  background: rgba(255,255,255,0.05) !important;
+  border: 1px solid rgba(255,255,255,0.12) !important;
+  backdrop-filter: var(--glass-blur-soft);
+  -webkit-backdrop-filter: var(--glass-blur-soft);
+  box-shadow: inset 0 1px 3px rgba(0,0,0,0.25);
+  transition: border-color 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  background: rgba(255,255,255,0.08) !important;
+  border-color: rgba(180,195,255,0.5) !important;
+  box-shadow: inset 0 1px 3px rgba(0,0,0,0.2), 0 0 0 4px rgba(140,170,255,0.14);
+}
+
+.contact-icon {
+  background: var(--glass-fill);
+  border: 1px solid rgba(255,255,255,0.14);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.2), 0 6px 16px -8px rgba(0,0,0,0.5);
+  transition: transform 0.3s cubic-bezier(.2,.8,.2,1), background 0.3s ease;
+}
+
+.glass-card:hover .contact-icon {
+  transform: translateY(-2px) rotate(-4deg);
+}
+
+/* ── Footer glass strip ─────────────────────────────────────── */
+.footer {
+  background: linear-gradient(180deg, rgba(8,8,11,0.55), rgba(6,6,8,0.85)) !important;
+  backdrop-filter: blur(18px) saturate(150%);
+  -webkit-backdrop-filter: blur(18px) saturate(150%);
+}
+
+/* ── Accessibility: keep copy readable on lighter glass ────────*/
+.service-short,
+.service-full p,
+.why-body p,
+.portfolio-card > p,
+.portfolio-detail p,
+.contact-card p,
+.faq-answer p,
+.step p,
+.pricing-features li,
+.feature-list li {
+  color: rgba(255, 255, 255, 0.7) !important;
+}
+
+.faq-question { color: rgba(255, 255, 255, 0.92) !important; }
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid rgba(180, 195, 255, 0.7);
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
+::selection { background: rgba(140, 170, 255, 0.28); color: #fff; }
+
+/* ── Glass scrollbar ────────────────────────────────────────── */
+::-webkit-scrollbar { width: 10px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.16);
+  border-radius: 10px;
+  border: 2px solid transparent;
+  background-clip: content-box;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(255, 255, 255, 0.28);
+  background-clip: content-box;
+}
+
+/* ── Fallback: browsers without backdrop-filter support ────────*/
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+  nav, .mobile-menu, .glass-card, .contact-form input,
+  .contact-form textarea, .btn-outline, .footer {
+    background: rgba(16, 16, 20, 0.94) !important;
+  }
+  .glass-card::before, .glass-card::after { display: none; }
+}
+
+/* ── Respect reduced motion globally ───────────────────────────*/
+@media (prefers-reduced-motion: reduce) {
+  .tilt, .glass-card, [data-aos] {
+    transition-duration: 0.15s !important;
+    animation: none !important;
+  }
 }
